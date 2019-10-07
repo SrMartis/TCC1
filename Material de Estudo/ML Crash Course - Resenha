@@ -1,0 +1,61 @@
+Machine Learning Crash Course:
+
+Linear regression is a kind of statistical analysis that attempts 
+to show a relationship between two variables. 
+Linear regression looks at various data points and plots a trend line. 
+Linear regression can create a predictive model on apparently random data,
+showing trends in data.
+
+
+Regressão Linear: O relacionamento das variáveis é linear, desse modo
+trata-se de uma função definida por: y = mx + b
+
+Por convenção em Machine Learning a equação que representa um modelo é 
+um pouco diferente: y' = b + w1x1
+
+Onde:
+	y' = É a variavel que se deseja prever(label ou rótulo);
+	b  = Trata-se do viés, muitas vezes referido como (w0);
+	w1 = É o peso ou relevência do fator 1;
+	x1 = É a variável de entrada(feature);
+
+Inferir(prever) basta substituir o valor x1 por algum outro valor.
+
+O modelo acima utiliza apenas uma variável de entrada, ou uma feature,
+modelos mais sofisticados possuem várias features: y' = b + w1x1 + w2x2 + w3x3
+
+Treino e Perda
+
+Treinar um modelo é simplesmente encontrar os pesos ideias para as variáveis
+de entrada. Em aprendizado supervisionado 
+os algoritimos de machine learning utilizam vários exemplos(dados) e procuram
+diminuir a perda. Perda é a diferença entre o valor previsto e o valor real.
+O algoritimo perfeito possuí perda zero. Treinar o modelo é encontrar os 
+pesos e viés possuem a menor perda entre todos os exemplos plotados.
+
+Duas medidas de erro são: 
+Erro quadrático: (valor_real - valor_previsto)² 
+Erro quadrático médio: Trata-se média da soma dos erros quadráticos.
+
+Existem muitas outras funções de perda os exemplos acima são os mais básicos.
+
+Reduzindo a Perda:
+	Para treinar um modelo é necessária uma boa maneira de diminuir
+o seu erro. A princípio, o algoritimo utiliza um valor 
+aleatório como peso para uma ou várias determinadas variáveis, 
+realiza uma iteração e avalia o erro encontrado, depois o valor dos pesos 
+é recalculado com um novo valor, um pouco acima ou um pouco abaixo que o 
+anterior e novamente avalia o erro. E assim sucessivamente até que o melhor 
+valor seja encontrado, ou seja aquele que diminui o erro/perda ao máximo.
+Quando este valor é encontrado e dito que o modelo CONVERGIU.
+
+Gradiente Descendente:
+
+Supondo que tenhamos tempo e recursos computacionais ilimitados para calcular
+a perda para todos os possíveis valores de peso para uma variável.
+As curvas de perda para problemas de regressão linear são normalmente convexas.
+Problemas convexos possuem apenas um valor minímo, onde o quoeficiente angular
+é zero. Este ponto é onde a função de perda converge. Calcular cada possível
+valor que w1(peso) é uma maneira ineficiente de encontrar o ponto de convergência.
+Um mecanismo muito popular em machine Learning é o Gradiente Descendente.
+	
