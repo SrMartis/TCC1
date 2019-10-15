@@ -1,0 +1,54 @@
+Going zero waste in canteens: Exploring food demand with data analytics
+Rumo ao desperdício zero em cantinas: Explorando a demanda de comida com análise de dados.
+
+Metodos existentes de predição:
+
+Existem dois tipos de modelos quantitativos para solução do poblema de predição
+da demanda de comida: Series temporais - Uma coleção de pontos distribuidos ao longo do 
+eixo do tempo representando uma variavel especifica, por exemplo historico de demanda. 
+Trata-se de um modelo util para identificação de sazonalidade e flutuações periodicas.
+São úteis na identificação de padrões e tendências de um determinado periodo, ao contrário
+dos fatores que afetam a demanda. 
+Outros modelos identificam relacionamentos entre diferentes fatores e a variável que se deseja 
+prever. A demanda por comida pode ser influenciada por fatores como condições climáticas,
+preços do menu, sasonalidade, etc. Um exemplo deste modelo é a regressão linear múltipla
+Multiple Linerar Regression (MLR). Este método mapeia e captura relacionamentos casuais entre
+a variável que se deseja prever e um determinado conjunto de fatores. 
+
+A.Sanchezand J.L Miller. Theevolution of an expert system in food service forecasting. 
+National Association of College and University Foodservice, 19:61–71, 1995.
+
+Series temporais podem ser estacionárias ou não estacionárias. Se uma série temporal é estacionária
+suas propriedades, média e variança, não irão depender do tempo. Ao contrário, séries temporais
+que possuem tendência, não são estacionárias, tais tendências irão afetar os valores da série temporal
+de acordo com o instante do tempo observado. Séries temporais podem incluir sasonalidade ou não.
+
+S.P. Cowpertwait Paul and V. Metcalfe Andrew. Introductory Time Series with R. Springer, 2009.
+
+A definição de sasonalidade é: "um padrão repetido em cada ano, ou um padrão que se repete 
+em qualquer periodo fixo". A venda de produtos alimentícios está diretamente relacionada 
+ao consumo destes produtos. Sasonalidade pode ser causada por padrões climáticos anuais,
+grandes feriados ou festivais, ocorrencias regular de eventos esportivos, etc.
+
+Lon Mu Liu, Siddhartha Bhattacharyya, Stanley L. Sclove, Rong Chen, and William J. Lattyak. 
+Data mining on time series: An illustration using fast-food restaurant franchise data. 
+Computational Statistics and Data Analysis, 37(4):455–476, 10 2001.
+
+Grande parte dos métodos estatisticos utilizados para previsão, assume que as series temporais
+são estacionárias, series temporárais não estacionárias são normalmente transformadas - via
+métodos e funções matemáticas - em séries estacionárias. Tal transformação torna o processo 
+de previsão, muito fácil: Desse modo é assumido que as propriedades estatisticas da serie
+temporal serão a mesma no futuro, assim como foi no passado.
+
+Por conta da aleatoriedade dos problemas do mundo real, tais modelos não permitem que o 
+relacionamento entre os fatores e a varivel prevista sejam capturados e mapeameados com 
+precisão. Contudo, tecnicas de regressão não linear tais como Redes Neurais Artificias (ANN)
+surgem como alternativas contra esse problema.
+
+Zhang G.,Patuwo B.E.,and Hu M. Y. Forecasting with artiﬁcial neural networks: The state 
+of the art. In International Journal of Forecasting, pages 35–62, 1998.
+
+
+2.2 Trabalhos relacionados
+
+//Continua
