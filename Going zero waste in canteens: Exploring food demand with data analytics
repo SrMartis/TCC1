@@ -51,4 +51,13 @@ of the art. In International Journal of Forecasting, pages 35–62, 1998.
 
 2.2 Trabalhos relacionados
 
-//Continua
+Judy L. Miller, Cynthla S. McCahon, and Brenda K. Bloss. Food production forecasting with simple 
+time series models. Hospitality Research Journal, 14(3):9–21,1991.
+
+Este estudo explora modelos com series temporais utilizando métodos de Naive, Media Movel 
+Simples (Simple Moving Average), Suavização Exponencial Simples (Simple Exponential Smoothing)
+para prever a demanda de comida em um restaurante universitário. Dados históricos de 3 anos
+foram analisados, as escolhas dos clientes para determinadas combinações de pratos foram 
+consideradas. Com esses dados foi possivel determinar o nível de preferencia dos consumidores
+para um determinado item do menu, assim como estimar sua demanda.
+
