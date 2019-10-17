@@ -61,3 +61,34 @@ foram analisados, as escolhas dos clientes para determinadas combinações de pr
 consideradas. Com esses dados foi possivel determinar o nível de preferencia dos consumidores
 para um determinado item do menu, assim como estimar sua demanda.
 
+Kisang Ryu and Alfonso Sanchez. The evaluation of forecasting methods at an institutional 
+foodservice dining facility. The Journal of Hospitality Financial Management,
+11(1):27–45, 2003.
+
+Identificaramm o método mais apropriado para prever a quantidade de refeições consumidas durante um
+semestre inteiro em uma universidade. A maioria dos métodos utiilizados foram baseados em series 
+temporais, como modelo 1,2 e 3 de Naive. SMA e Dupla Média Móvel, SES, Suaviazação Exponencial Dupla,
+Método de Holt's e Winter. O requisito para escolher o método mais apropriado e preciso foi a facilidade
+com que os gestores da cantina, assim como o nível de precisão. Assim, para estimar a precisão, as 
+métricas utilizadas foram o Desvio Médio Absoluto (Mean Absolute Deviation), Erro quadrático médio 
+(Mean Squared Error), Porcentagem de erro média (Mean Percentage Error), Raiz quadrada do erro médio 
+Root Squared Mean Error). Dados históricos de 13 semanas foram coletados. Tais dados foram ajustados 
+para levar em consideração circunstancias especiais como clima, eventos especiais, feriados, etc.
+Contudo, os modelos de series temporais utilizados não consideraram outras variáveis além do histórico
+de demanda de cada tipo de prato. O modelo de Naive-1 teve a pior performance, pois a previsão do
+número de refeições a ser produzida era baseada no dia anterior. LR (Linear Regression) foi o segundo
+método com a pior precisão, pois o modelo considera apenas uma variavel e consequentemente, não 
+conseguiu capturar o aparecimento da sazonalidade. Em contramão, Multipla Regressão Linear teve a melhor
+precisão (MSE = 382 e U-Statistic = 0,78) pois considera vários preditores. Em termos de precisão esse 
+método teve melhor performance pois encaixou a serie temporal dos dados com sazonalidade. Neste estudo 
+a escolha do método mais apropriade foi baseado na precisão e simplicidade, pois um gerente de cozinha
+comum, não possuí conhecimento ou tempo para explorar modelos. Mesmo com o MLR tendo a melhor precisão,
+o modelo escolhido como mais apropridado foi Naive-2 - utiliza a demanda das duas ultimas semanas para 
+prever a demanda da próxima-, obtendo o terceiro lugar em precisão e eleito como segundo 
+método mais fácil de se usar e implementar.
+
+[BS09]
+Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Usage of data mining techniques in discovering the 
+food consumption patterns of students and employees of university.2009.
+O estudo possuí 3 metas principais. Primeiro identificar os 4 mais relevantes 
+
