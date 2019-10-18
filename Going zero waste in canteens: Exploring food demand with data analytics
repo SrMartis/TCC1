@@ -90,5 +90,62 @@ método mais fácil de se usar e implementar.
 [BS09]
 Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Usage of data mining techniques in discovering the 
 food consumption patterns of students and employees of university.2009.
-O estudo possuí 3 metas principais. Primeiro identificar os 4 mais relevantes 
+
+O estudo possuí 3 metas principais. Primeiramente, identificar os 4 fatotes mais relevantes que afetam
+o consumo de comida nos refeitorios de uma universidade. Depois construir um sistema capaz de 
+prever o consumo diario da combinação de 4 tipos de pratos contidos no cardapio diario. O estudo 
+almeja descobrir/identificar associações frequentes no consumo. Para realizar isso, tecnicas de 
+mineração de dados tais como Arvores de Decisão (Decision Trees) para regressão - Microsoft Decision
+Tree (MSDT)- e regras de associação (Association Rules) foram usadas. Enquanto as regras de associação
+permitem a descoberta de relacionamentos ocultos, correlações e atributos descritivos, as arvores de
+decisão ajudam a prever novos casos baseados nos antigos. [Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. Introduction to Data Mining,
+(First Edition). Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA,
+2005.] Assim, os dados de um ano relacionados ao consumo diario de comida foram coletados. Os dados 
+continham 4 tipos de pratos, dia da semana por nome, numero do dia e mes, um booleano indicando se o 
+dia é feriado ou fim de semana. Para mensurar a performance, a metrica R² foi utilizada.
+
+Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Predicting food demand in food courts by decision 
+tree approaches. Procedia Computer Science, 3(Supplement C):759 – 763, 2011. 
+World Conference on Information Technology.
+
+Este estudo utiliza uma base dados de dois anos anteriores. Em adição as variaveis descritas no 
+paragrafo anterior, foram registrados as calorias do cardapio. Arvores de decisão foram utilizadas, 
+tais como Arvores de Classificação e Regressão (Classification And Regression Trees), CHAID e 
+Microsoft Decision Trees. Como a maiorias das variaveis  foram continuas e descretas, metodos 
+considerando multipla divisão de atributos tiveram melhor performance do que aqueles que
+utilizaram divisão binária, provando mais uma vez que o melhor método depende do contexto do 
+problema assim como que, Arvores de Decisão para regressão possuem boa performance na previsão
+do consumo de comida.
+
+Arvores de decisão são frequentemente comparadas a Redes Neurais Artificiais, ambas são capazes de
+capturar relacionamentos não lineares entre variaveis, mesmo que não sejam predefindos. Por conta
+da falta de robustez para lidar com valores atipicos(outliers), performance subotima e a dificil
+interpretação das Arvores de Decisão quando varias variaveis de entradas são utilizadas, Arvores
+Aleatórias foram propostas [Leo Breiman. Random forests. Machine Learning, 45(1):5–32, Oct 2001.]
+para superar estes problemas [Muhammad Waseem Ahmad, Monjur Mourshed, and Yacine Rezgui. Trees 
+vs neurons: Comparison between random forest and ann for high-resolution prediction of building ]
+energy consumption. Energy and Buildings, 147:77 – 89, 2017]. Assim, devido a falta de estudo
+na aplicação de Redes Neurais Artificiais e Avores Aleatórias para previsão da demanda comida para
+serviços fabris, tais tecnicas foram aplicadas neste estudo. Aliado ao fato que não existe algo
+como "O melhor método para todos os contextos", Support Vector Regression também foram usados, 
+assim é possivel realizar comparações entre modelos preditivos.
+
+[Lasek A., Cercone N., and Saunders J. Leon-Garcia A. et al. (eds) Smart City 360, volume 166, 
+chapter Restaurant Sales and Customer Demand Forecasting: Literature Survey and Categorization 
+of Methods, pages 479–491. Springer, Cham, June 2016.], desesnvolveram um questionario literario
+sobre os metodos apropridados para prever a demanda dos consumidores. Eles também forneceram
+uma lista com as variaveis que podem ser, eventualmente, utilizadas como preditores, tais como 
+(niveis de chuva, temperatura), tempo (mes, semana, dia da semana, horario), feriados (nacional,
+municipal, e feriados escolares), eventos especiais e dados históricos de demanda. Depois disso,
+tais metodos são brevemente descritos e artigos relacionados que eles são aplicados são mostrados.
+Portanto, a Regreessão Multipla e Redes Neurais Artificiais foram idientificados como os metodos 
+mais apropriados para previsão de demanda dos consumidores, pois ambos são capazes receber
+multiplas variaveis preditores como entrada. Apesar dos modelos de Regressão Multipla possam
+falhar em clarificar o relacionamento entre preditores e valores previstos por conta da
+multicolinearidade - fenomeno em que um preditor pode ser predito por outro - entre as variaveis
+preditoras, tais modelos podem traduzir também padrões não lineares em dados, 
+[ANJ16]
+
+
+
 
