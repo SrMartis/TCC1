@@ -58,4 +58,25 @@ Problemas convexos possuem apenas um valor minímo, onde o quoeficiente angular
 é zero. Este ponto é onde a função de perda converge. Calcular cada possível
 valor que w1(peso) é uma maneira ineficiente de encontrar o ponto de convergência.
 Um mecanismo muito popular em machine Learning é o Gradiente Descendente.
-	
+
+Dada a função de perda, o algoritimo seleciona um valor aleatório para iniciar 
+e calcula o gradiente para o ponto selecionado na curva da função. 
+O gradiente é um vetor que possuí duas caracteristicas: Uma direção e uma magnitude. Ele 
+aponta para direção de maior variação dentro da curva da função de perda.  No caso do
+gradiente descente a direção do seu vetor é negativa (direção que a função de perda é cada
+vez menor). A cada passo do gradiente, uma fração do valor de magnitude do vetor é 
+selecionada e o processo é repetido até que a direção do vetor inverta. Caso a função
+escolhida tenha mais um parametro, o algoritimo do gradiente descente é aplicado 
+simultaneamente para ambos parametros.
+A direção e magnitude do vetor são multiplicadas por um escalar conhecido como taxa de
+aprendizado, esse valor irá determinar o próximo ponto do gradiente na curva de perda. 
+Esse escalar é um hiperparametro utilizado para refinar o algoritimos de machine learning.
+Se a taxa de aprendizado foi muito baixa, o processo de aprendizado se torna demorado, 
+caso contrário, o próximo ponto do gradiente na curva de perda pode ultrapassar em muito
+o valor minimo da função de perda. Todo problema de regressão, possuí uma taxa adequada
+de aprendizado.
+
+//EXERCICIOS PARA REDUÇÃO DE PERDA E OTIMIZAÇÃO DE TAXA DE APRENDIZADO.//
+
+Gradiente Descendente Estocástico:
+
