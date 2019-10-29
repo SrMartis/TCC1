@@ -3,25 +3,6 @@ Até 2030, reduzir pela metade o desperdício de alimentos per capita mundial,
 nos níveis de varejo e do consumidor, e reduzir as perdas de alimentos ao longo 
 das cadeias de produção e abastecimento, incluindo as perdas pós-colheita.
 
-
-Definição de despercídio: http://www.fao.org/platform-food-loss-waste/food-waste/definition/en/
-Food waste refers to the decrease in the quantity or quality of food resulting from 
-decisions and actions by retailers, food service providers and consumers.  
-Food is wasted in many ways: Fresh produce that deviates from what is considered 
-ptimal, for example in terms of shape, size and color, is often removed from the supply chain during sorting operations. 
-Foods that are close to, at or beyond the “best-before” date are often discarded by 
-retailers and consumers. Large quantities of wholesome edible food are often unused 
-or left over and discarded from household kitchens and eating establishments.
-Less food loss and waste would lead to more efficient land use and better water resource management with positive impacts on climate change and livelihoods.
-
-Definição de perda de alimentos: 
-Food loss
-Empirically, it refers to any food that is discarded, incinerated or otherwise 
-disposed of along the food supply chain from harvest/slaughter/catch up to, 
-but excluding, the retail level, and does not re-enter in any other productive 
-utilization, such as feed or seed.
-
-
 Introdução ao Controle de Custos em UAN - Livro
 Por Monise Viana Abranches, Ceres Mattos Della
 
@@ -29,24 +10,4 @@ Por Monise Viana Abranches, Ceres Mattos Della
 questões administrativas importantes. Entre as questões neglienciada
 estão os cálculos do custos de produção, que envolvem acompanhamento
 e eliminação dos disperdícios para aumento dos lucros."
-
-Um estudo quantificativo analisou a produção e desperdício de alimentos em 
-em uma Unidade Produtora de Refeições em Rio Preto durante 
-20 dias úteis, ao longo dos dias o desperdício variou de 8,4% a 20,4% 
-que representou em média 15,6% da produção.
-O indice foi considerado elevado.
-
-
-AVALIAÇÃO DE SOBRAS EM UMA UNIDADE PRODUTORA DE REFEIÇÕES
-DE UM MUNICÍPIO DO INTERIOR PAULISTA.
-
-As autoras destacam que o controle da produção de alimentos e desperdício é 
-indispensável para redução de custos e aumento da lucratividade dentro da UAN. 
-Por isso é necessário que planejamento seja realizado com antecedência, usando-se 
-de procedimentos padronizados e registros das quantidades produzidas, para adequação
-das quantidades de alimentos que devem ser produzidas.
-
-
-
-VIEIRA Vivian Breglia Rosa, AMARAL Marta Nichelle Do, SILVA, Maria Fernanda Da.
 
