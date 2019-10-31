@@ -79,4 +79,45 @@ de aprendizado.
 //EXERCICIOS PARA REDUÇÃO DE PERDA E OTIMIZAÇÃO DE TAXA DE APRENDIZADO.//
 
 Gradiente Descendente Estocástico:
+No gradiente descente "batch" é o número total de exemplos utilizados para cacular o 
+gradiente em uma única iteração, ou seja o conjuntos dos dados. Grandes conjuntos de dados
+(milhões de  registros) podem conter um número enorme de recursos, a consequência disso
+é que uma única iteração para calcular o gradiente descendente pode demorar muito.
 
+Grandes bases de dados provavelmente contém dados redundantes, contudo essas bases de dados
+não possuem muitos valores preditivos quando comparadado uma base de dados media.
+
+Se pudessemos calcular o gradiente medio utilizando menos poder computacional? Escolhendo
+exemplos aleatórios da nossa base de dados, podemos estimar (com ruido) uma grande média
+utilizando uma quantidade de dados muito reduzida. Esta é a ideia do Gradiente Descendente
+Estocastico (Stocastic Gradiente Descent). Para cada iteração é utilizado um único 
+exemplo, dado um número suficiente de iterações o SGD funciona, porém possuí muito ruido.
+O termo estocástico indica que os exemplos são selecionados aleatóriamente.
+
+Gradiente Descendente Estocástico - Mini lote é um método intermediário entre o SGD e 
+a iteração completa do Gradiente Descendente, um mini lote tipico contém de 10 a 1000 exemplos
+escolhidos aleatóreamente. SGD - Mini lote reduz a quantidade de ruido do SGD e é mais
+eficiente que a iteração completa.
+
+////PLAY GROUND EXERCISE /// O playground é um programa desenvolvido especialmente para
+ensinar os principios de Machine Learning. Para cada exercicio é gerado um conjunto de dados.
+A meta do exercicio é ajustar vários hiperparametros para criar um modelo que classifica
+(separa ou distingue) o valor dos rótulos. Os conjuntos de dados possuem ruido, e será
+impossível classificar todos os exemplos.
+
+Todos os exercícios apresentam uma visualização do atual estado do modelo construído:
+	-Cada eixo da visualização apresentado representa um fator específico.
+	-Cada ponto no gráfico representa um dado.
+	-As cores dos pontos representam classes, por exemplo: Laranja homens, roxo mulheres.
+	-A cor de fundo respresenta o local onde os exemplos devem ser plotados, de acordo
+	com o modelo de predição. Um fundo laranja ao redor de um ponto laranja, indica que 
+	o modelo fez a previsão correta. Um fundo roxo ao redor de um ponto laranja indica que
+	a previsão do modelo está errada.
+	-Ambas as cores de classificação possuem um gradiente que vai do tom mais escuro da
+	cor em questão, até o branco. Este gradiente indica o grau de confiança da aferição
+	do modelo. Cores mais escuras representam alto grau de confiança na previsão.
+	-A visualização deve ser utilizada para avaliação do progresso de previsão e ajuste 
+	do modelo.
+
+Conhecendo o PLAYGROUND -> Primeiro execício, experimento com taxa de aprendizado.
+	
