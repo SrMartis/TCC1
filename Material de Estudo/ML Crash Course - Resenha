@@ -121,3 +121,19 @@ Todos os exercícios apresentam uma visualização do atual estado do modelo con
 
 Conhecendo o PLAYGROUND -> Primeiro execício, experimento com taxa de aprendizado.
 	
+TensorFlow é um framework computacional para construção de modelos de Machine Learning. Modelos
+podem ser criados utilizando APIs de baixo nível(sequência de operações matemáticas), e alto
+nível (funções e operações de alto nível como  regressão linear, e redes neurais).
+
+A hierarquia das ferramentas do TensorFlor:
+	Estimadores TF --------------------> API de alto nível orientada a objetos.
+	ty.layers, tf.losses, tf.metrics --> Bibliotecas reutilizaveis, e modelos de componentes comuns.
+	------------------------- APIS de baixo nível -----------------------------
+	Python TF -------------------------> Camada para agregar Kernels C++.
+	CPU-GPU-TPU -----------------------> Kernel funciona em uma ou mais plataformas.
+
+O TensorFlow consiste de dois componentes:
+	- Graph protocol buffer
+	- Executaável (distribuido de grafos)
+	
+Ambos são análogos ao código Python e ao seu Interpretador. 
