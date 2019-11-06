@@ -143,8 +143,64 @@ mais apropriados para previsão de demanda dos consumidores, pois ambos são cap
 multiplas variaveis preditores como entrada. Apesar dos modelos de Regressão Multipla possam
 falhar em clarificar o relacionamento entre preditores e valores previstos por conta da
 multicolinearidade - fenomeno em que um preditor pode ser predito por outro - entre as variaveis
-preditoras, tais modelos podem traduzir também padrões não lineares em dados, 
+preditoras, tais modelos podem traduzir também padrões não lineares em dados, ao contrário das
+séries temporais.
 [ANJ16]
+
+In [PatuwoB.Zhang,G.andM.Hu. Forecastingwithartiﬁcialneuralnetworks: Thestate of the art. 
+International Journal of Forecasting, 14:35–62.] O estado da arte em confiabilidade na 
+previsão é apresentada. A maioria dos problemas do mundo real são não lineares, assim o
+estudo mostra o por que as redes neurais são métodos preferíveis e apresentando uma visão
+geral das áreas em que as Redes Neurais Artificais encontram aplicação. O estudo é concluído
+com uma apresentação dos problemas e tecnicas das Redes Neurais e uma maneira de encontrar
+a arquitetura ótima da rede.
+
+Do mesmo modo que as Redes Neurais, Suport Vector Regression (SVR) é um método cada vez mais 
+utilizado para previsão. Em  [A.A. Levis and L.G. Papageorgiou. Customer demand 
+forecasting via support vector regression analysis. Chemical Engineering Research 
+and Design, 83(8):1009 – 1018, 2005.] é proposta uma metodologia de previsão da 
+demanda dos consumidores através da analise SVR. A metodologia é baseada na teoria do aprendizado
+estatístico [V. Vapnik. The nature of statistical learning theory. Springer, New York, 1995.]
+inferindo uma função preditiva através de dados de treino, como uma média da previsão dos 
+dados não vistos, além de aplicações do SVR. O estudo também mostra uma visão geral sobre
+o método de refinamento para os Hiperparametros do SVR e finaliza com listrações e exemplos
+da aplicação do SVR.
+
+ Em [Xinliang L. and Dandan S. Tan Y., Takagi H., Shi Y., Niu B. (eds) Advances in Swarm 
+ Intelligence, volume10386, chapter University Restaurant Sales Forecast Based on BP 
+ Neural Network - In Shanghai Jiao Tong University Case., pages 338–347. Springer, 
+ Cham, June 2017.] foram obtidas as maiores taxas de acerto, utilizando Redes Neurais com
+ Retro Propagação (BPNN - Back Propagation Neural Networks) para prever a quantidades de 
+ vendas em um restaurante. O conjunto de variáveis utilizados são muito similares aos
+ utilizados nos estudos [Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Usage of data 
+ mining techniques in discovering the food consumption patterns of students and employees
+ of university. 2009.] e [Ahmet Selman Bozkir and Ebru Akcapinar Sezer. 
+ Predicting food demand in food courts by decision tree approaches. Procedia Computer 
+ Science,3(SupplementC):759 – 763, 2011. World Conference on Information Technology.
+ MAPE(Mean Absolute Percentage Error) foi utilizado como métrica de assertividade.
+ 
+ Conclusões.
+ 
+ Resumidamente, são esperados relacionamentos em grande parte não lineares entre as 
+ variaveis preditores e o valor predito - demanda diaria para um determinado tipo de prato -
+ tecnicas avançadas de mineração de dados são mais apropriadas para se atingir os mais 
+ altos níveis de precisão possiveis, desse modo dimuindo o máximo o desperdício de comida.
+ Toda dinamica e aleatoriedade involvida no contexto implica o uso destas tecnicas, mesmo
+ que algumas delas sejam de dificil interpretação. 
+ Como não há consenso sobra qual tecnica de mineração de dados (Redes Neurais Artificiais,
+ SVRs, Florestas Aleatórias) serão mais eficientes no contexto do estudo apresentado nesta
+ dissertação, todos eles serão aplicados neste estudo, sendo este um aspecto inovador 
+ na previsão da demanda de comida. O considerável número de variáveis, muitas delas nunca
+ exploradas nas literaturas anteriores também constitui consideravel contribuição para
+ esta dissertação.
+  
+ 
+
+
+
+
+
+
 
 
 
