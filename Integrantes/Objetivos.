@@ -1,9 +1,0 @@
-Objetivo Geral - Criação de um software que auxilie gestores e chefes de cozinha na tomada de decisão da quantidade de coida que 
-                 deve ser produzida, baseado na estimativa de quantas pessoas irão frequentar o refeitório.
-
-Objetivos Específicos
-  ◉	Mapear os principais fatores que influenciam na frequência das pessoas no refeitório;
-  ◉	Avaliar os algoritmos preditivos que melhor atendam as necessidades para predição deste problema;
-  ◉	Desenvolvimento do software de predição;
-  ◉	Coleta e Analise de dados da instituição a ser estudada;
-  ◉	Realizar testes e estudos de aplicação do software para obtenção de resultados.
