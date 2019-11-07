@@ -137,3 +137,60 @@ O TensorFlow consiste de dois componentes:
 	- Executaável (distribuido de grafos)
 	
 Ambos são análogos ao código Python e ao seu Interpretador. 
+
+Todos os problemas que podem ser resolvidos utilizando a API de alto nível, também podem
+ser resolvidos utilizando as API's de baixo nível. O tf.estimator é compatível com 
+scikit-Learn (Bilbioteca muito Popular em Python).
+Abaixo exemplo de código DE REGRESSÃOO LINEAR utilizando tf.estimator.
+
+import tensorflow as tf
+
+# O CLASSIFICADOR LINEAR É CONSTRUÍDO, UTILIZANDO AS VARIÁVEIS PREDITORAS (FEATURE_COLUMNS)
+classifier = tf.estimator.LinearClassifier(feature_columns)
+
+# O MODELO É TREINADO COM A BASE DE DADOS DE TREINO
+classifier.train(input_fn=train_input_fn, steps=2000)
+
+# O MODELO É UTILIZADO PARA PREVER VALORES
+predictions = classifier.predict(input_fn=predict_input_fn)
+
+PRIMEIROS PASSOS COM TENSOR FLOW: EXERCICIOS DE PROGRAMAÇÃO
+Os exercícios são executados utilizando a API de alto nível tf.estimator.
+Não é necessária instalação de software(recurso opcional).
+
+EXERCICIO 1:
+Introdução rápida ao Pandas: Uma biblioteca para analise de dados e modelagem. 
+Muito utilizada em TensorFlor. Pandas é uma API orientado a colunas.
+
+Conceitos básicos: As estruturas primarias são: 
+DataFrame --> Pode ser imaginada como uma tabela de dados relacional, com linhas e colunas.
+Series --> Unica coluna. Um DataFrame possuí uma ou mais Series.
+
+DataFrame é uma abstração para a manipulação de dados. A seguir um exemplo de como construir
+um objeto Serie: pd.Series(['São Francisco', 'São José', 'São Paulo'])
+
+Objetos DataFrame podem ser criados com um conjunto de series, com sintaxe igual a JSON:
+	city_names = pd.Series(['San Francisco', 'San Jose', 'Sacramento'])
+	population = pd.Series([852469, 1015785, 485199])
+
+pd.DataFrame({ 'City name': city_names, 'Population': population }) <--- Criação do DataFrame
+utilizando duas series.
+
+Contudo, a maioria das vezes o DataFrame é carregado com dados de arquivos externos:
+california_housing_dataframe = pd.read_csv("https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv", sep=",")
+california_housing_dataframe.describe() < -- Comando apresenta dados estatísticos sobre o 
+DataFrame
+california_housing_dataframe.head() < -- Comando que mostra as primeiras linhas do DataFrame.
+california_housing_dataframe.hist('housing_median_age') <-- Apresenta distribuição dos valores
+de uma coluna.
+
+Acessando dados:
+
+
+
+
+
+
+
+
+
