@@ -213,6 +213,9 @@ Operações aritiméticas do Python podem ser aplicadas as séries:
 NumPy é um ferramenta para computação cientifica. As Series do panda podem ser utilizadas como parametros
 para a maioria das funções do NumPy.
 
+//IMPORTAÇÃO DA BIBLIOTECA DO NUMPY
+import numpy as np
+
 Para operações TRANFORMAÇÕES MAIS COMPLEXAS com series usar Series.apply. Similar a função map do Python:
 //ESTE MÉTODO RETORNA UMA NOVA SERIE COM VALORES DE POPULAÇÃO MAIORES QUE 1 MILHÃO.
 population.apply(lambda val: val > 1000000)
@@ -233,3 +236,19 @@ Solução: cities['Is wide and has saint name'] = (cities['Area square miles'] >
 & cities['City name'].apply(lambda name: name.startswith('San')) cities
 
 Indices
+Series e objetos DataFrame possuem a propriedade index, utilizado para identificar unicamente
+cada Serie ou cada linha do DataFrame.
+//INDICE DE UMA SERIE
+city_names.index
+//INDICE DE DE UM DATAFRAME
+cities.index
+
+Para reordenar as linhas manualmente utilize a função DataFrame.reindex([2,0,1]).
+Essa função é útil para gerar ordenar de maneira aleatória os indices.
+A função abaixo, utiliza a função random.permutaion da bilbioteca do num pi, recebendo como 
+parametro os indices do DataFrama para gerar numeros aletórios para reordenar os indices.
+
+cities.reindex(nm.random.permutaion(cities.index))
+
+EXERCÍCIO 2
+
