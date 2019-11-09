@@ -166,6 +166,9 @@ Conceitos básicos: As estruturas primarias são:
 DataFrame --> Pode ser imaginada como uma tabela de dados relacional, com linhas e colunas.
 Series --> Unica coluna. Um DataFrame possuí uma ou mais Series.
 
+//IMPORTAÇÃO DA BIBLIOTECA DO PANDAS
+import pandas as pd
+
 DataFrame é uma abstração para a manipulação de dados. A seguir um exemplo de como construir
 um objeto Serie: pd.Series(['São Francisco', 'São José', 'São Paulo'])
 
@@ -185,12 +188,48 @@ california_housing_dataframe.hist('housing_median_age') <-- Apresenta distribui�
 de uma coluna.
 
 Acessando dados:
+Os dados do dataframe são acessados usando as funções dict/list do Python.
+//Crio um data frame com duas series, city_name e population
+cities = pd.DataFrame({ 'City name': city_names, 'Population': population }) 
+//APRESENTO TODOS OS VALORES DA SERIE
+print(type(cities['City name']))
+//TODOS OS VALORES DA LISTA SÃO ACESSADOS
+cities['City name']
 
+//ÚM ÚNICO REGISTRO DA SERIE É AREPSENTADO
+print(type(cities['City name'][1]))
+//UM ÚNICO REGISTRO DA SERIE É MOSTRADO
+cities['City name'][1]
 
+//DOIS REGISTROS DA SERIE SÃO MOSTRADOS
+print(type(cities[0:2]))
+//DOIS REGISTROS DA SERIE SÃO SELECIONADOS
+cities[0:2]
 
+Manipulação de dados
+Operações aritiméticas do Python podem ser aplicadas as séries:
+//SERIE population / 1000.
 
+NumPy é um ferramenta para computação cientifica. As Series do panda podem ser utilizadas como parametros
+para a maioria das funções do NumPy.
 
+Para operações TRANFORMAÇÕES MAIS COMPLEXAS com series usar Series.apply. Similar a função map do Python:
+//ESTE MÉTODO RETORNA UMA NOVA SERIE COM VALORES DE POPULAÇÃO MAIORES QUE 1 MILHÃO.
+population.apply(lambda val: val > 1000000)
 
+Modificando os DataFrames
+//SÃO ADICIONADAS DUAS SERIES NOVAS PARA O DATAFRAME cities
+cities['Area square miles'] = pd.Series([46.87, 176.53, 97.92])
+cities['Population density'] = cities['Population'] / cities['Area square miles']
+cities
 
+Exercício 1:
+Modifique a tabela Cidades adicionando uma nova coluna do tipo boolean. Esta coluna tem como valor VERDADEIRO
+somente se: O nome da cidade vem depois de SAN (santo) e a cidade possuem mais de 50 milhas quadradas.
+*AS CRIAÇÃO DE CONDIÇÕES UTILIZANDO VARIAS SERIES É FEITA COM & AO INVÉS DE AND.
 
+//Função startwith verifica se a string possuí um substring de acordo com a passada no parâmetro.
+Solução: cities['Is wide and has saint name'] = (cities['Area square miles'] > 50) 
+& cities['City name'].apply(lambda name: name.startswith('San')) cities
 
+Indices
