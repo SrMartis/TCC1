@@ -1,0 +1,125 @@
+Variaveis dependentes e independentes.
+
+Dependente, tem seu resultado depende de uma ou mais variavéis independêntes, ou seja,
+trocando a variavel independente a variavel dependente tem seu valor alterado.
+Contudo elas podem não ter nenhuma correlação.
+
+Para plotar um gráfico entre duas variáveis:
+Independente fica no eixo X, enqunanto a dependente no eixo Y;
+
+
+Covariância: Em teoria da probabilidade e na estatística, a covariância, 
+ou variância conjunta, é uma medida do grau de interdependência (ou inter-relação) 
+numérica entre duas variáveis aleatórias. 
+Assim, variáveis independentes têm covariância zero.
+
+
+Análise de regressão Múltipla:
+http://www.portalaction.com.br/analise-de-regressao/regressao-linear-multipla
+
+Basicamente, trata-se de uma regressão linear que utiliza dois ou mais parametros
+para descrever o resultado de uma variável. Neste caso existe uma variável dependente
+(resultado) depende de varias variáveis independentes.
+
+
+Modelo exploratório - Análise de Cluster
+
+Cluster defininção:
+
+https://dictionary.cambridge.org/pt/dicionario/ingles/cluster
+"1. a group of similar things that are close together, sometimes surrounding something".
+
+
+Cluster analysis or clustering is the task of grouping a set of objects in such a way 
+that objects in the same group (called a cluster) are more similar (in some sense) 
+to each other than to those in other groups (clusters). 
+It is a main task of exploratory data mining, 
+and a common technique for statistical data analysis, 
+used in many fields, including machine learning, pattern recognition, 
+image analysis, information retrieval, bioinformatics, 
+data compression, and computer graphics.
+https://en.wikipedia.org/wiki/Cluster_analysis
+
+Utilizado quando amostras de dados análisada não são homogeneas, utilizado para classificar 
+e separar os dados de acordo com sua similaridade ou dissimilaridade e criar grupos (clusters
+ou aglomerados).
+
+Mineração de texto:
+Processo de exploração e analise de grandes quantidades de texto e dele extrair conceitos,
+padrões palavras chave informações relevantes de maneira automatizada.
+
+Text mining, also known as text analysis, is the process of transforming unstructured 
+text into meaningful and actionable information. By identifying topics, patterns, 
+and relevant keywords, text mining allows you to obtain valuable insights without 
+needing to go through all your data manually.
+https://monkeylearn.com/text-mining/
+
+
+Análise fatorial:
+
+Isso poderia ser utilizado para fazer as pessoas responderem a pesquisa de satisfação 
+por exemplo helpdesk daqui do CEFSA,  definindo o por que as pessoas não a respondem.
+
+Visa encontrar definir as variaveis que são úteis e relevantes para a análise e 
+assim definir seus fatores de importancia. Utiliza análise quantitativas e qualitativas. 
+Desse modo é possível definir so quantificadores.
+
+Analise fatorial confirmatória: Utlizada para confirmar a relevância dos fatores e dados
+encontratos.
+
+Modelos de predição existentes:
+	Existem dois tipos de modelos quantitativos para solução do poblema de predição
+da demanda de comida: Series temporais - Uma coleção de pontos distribuidos ao longo do 
+eixo do tempo representando uma variavel especific, por exemplo historico de demanda. 
+Trata-se de um modelo util para identificação de sazonalidade e flutuações periodicas.
+São úteis na identificação de padrões e tendências de um determinado periodo, ao contrário
+dos fatores que afetam a demanda.
+
+Primeira tecnica.
+
+Regressão linear simples. Verifica se a variação de uma variavel em relação a outra é
+significativa ou não, resumidamente, determina a influência de uma variável sobre a outra.
+Verifica se a variação de uma das variáveis independentes explica a variação da variavel dependente.
+Tecnica utiliza para analise preditiva.
+
+A regressão utiliza dois tipos DE variáveis: Continuas e discretas
+Numerica					Quantitativa
+Discreta: Trabalha com números inteiros 	Variavel Nominal - Não possuí ordem, define uma
+						qualidade.
+Por exemplo: Não é possivel ter 0,5 filhos	Ordinal - Existe uma sequencia que dita uma 
+						GRADUAÇÃO em uma variavel. Por exemplo: Escolaridade.
+Continuo: Utiliza valores continuos, que podem 
+incluir decimais, por exemplo.
+
+É muito importante conhencer os tipos de variveis para descreve-los em um TCC, por exemplo.
+
+Na regressão linear, para se trabalhar com variáveis qualitativas é necessário transforma-las em 
+variável Dummy(valores binários). Normalmente as variaveis qualitativas são tranformadas em 
+binárias. 
+A variável Y é sempre a dependente, enquanto X é independente. 
+A equação utilizada na regressão linear é a equação da reta.
+Existem 3 tipos de relações que podem ser demonstradas. Diretamente proporcional e inversamente 
+proporcional, ou não correlação.
+Diretamente proporcional - Sempre que variavél independete aumenta seu valor, a variável 
+dependente também aumenta.
+Inversamente propocional - Sempre que a variável independetente aumenta, a dependente diminui.
+Não correção - O gráfico não apresenta variável, desse modo fica comprovada a não variação das
+variaveis.
+
+Aula 4
+
+Regressão logistica.
+Utilizada para realizar classificação, dividir em grupos uma determinad amostragem.
+Por exemplo inadimplmentes ou adimplentes. Através do levantamento de informações ao longo do tempo,
+é possível prever o perfil de determinado cliente. A variavel dependente é binária, variavel 
+independete são metricas ou não.
+
+Requisitos: Número minimo de observações por variavel independente: 5
+Para cada grupo são necessárias no minino 20 observações.
+
+A regressão logistica gera uma curva no cartesiano.
+
+a função utilizada = 
+
+Desigualdade: Existe um x numero de vezes maior de um evento acontecer em relação ao evento y.
+Calculo da probabilidade p = 1/1+e^(a+bX).
