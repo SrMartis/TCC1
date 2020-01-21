@@ -1,0 +1,201 @@
+RUMO AO DESPERDÍCIO ZERO EM CANTINAS - LEITURA E TRADUÇÃO DO TEXTO : GOING TO WASTE ZERO IN CANTEENS DE DIOGO XAVIER RIBEIRO 
+PEREIRA
+  
+Going zero waste in canteens: Exploring food demand with data analytics
+Rumo ao desperdício zero em cantinas: Explorando a demanda de comida com análise de dados.
+
+Metodos existentes de predição:
+
+Existem dois tipos de modelos quantitativos para solução do poblema de predição
+da demanda de comida: Series temporais - Uma coleção de pontos distribuidos ao longo do 
+eixo do tempo representando uma variavel especifica, por exemplo historico de demanda. 
+Trata-se de um modelo util para identificação de sazonalidade e flutuações periodicas.
+São úteis na identificação de padrões e tendências de um determinado periodo, ao contrário
+dos fatores que afetam a demanda. 
+Outros modelos identificam relacionamentos entre diferentes fatores e a variável que se deseja 
+prever. A demanda por comida pode ser influenciada por fatores como condições climáticas,
+preços do menu, sasonalidade, etc. Um exemplo deste modelo é a regressão linear múltipla
+Multiple Linerar Regression (MLR). Este método mapeia e captura relacionamentos casuais entre
+a variável que se deseja prever e um determinado conjunto de fatores. 
+
+A.Sanchezand J.L Miller. Theevolution of an expert system in food service forecasting. 
+National Association of College and University Foodservice, 19:61–71, 1995.
+
+Series temporais podem ser estacionárias ou não estacionárias. Se uma série temporal é estacionária
+suas propriedades, média e variança, não irão depender do tempo. Ao contrário, séries temporais
+que possuem tendência, não são estacionárias, tais tendências irão afetar os valores da série temporal
+de acordo com o instante do tempo observado. Séries temporais podem incluir sasonalidade ou não.
+
+S.P. Cowpertwait Paul and V. Metcalfe Andrew. Introductory Time Series with R. Springer, 2009.
+
+A definição de sasonalidade é: "um padrão repetido em cada ano, ou um padrão que se repete 
+em qualquer periodo fixo". A venda de produtos alimentícios está diretamente relacionada 
+ao consumo destes produtos. Sasonalidade pode ser causada por padrões climáticos anuais,
+grandes feriados ou festivais, ocorrencias regular de eventos esportivos, etc.
+
+Lon Mu Liu, Siddhartha Bhattacharyya, Stanley L. Sclove, Rong Chen, and William J. Lattyak. 
+Data mining on time series: An illustration using fast-food restaurant franchise data. 
+Computational Statistics and Data Analysis, 37(4):455–476, 10 2001.
+
+Grande parte dos métodos estatisticos utilizados para previsão, assume que as series temporais
+são estacionárias, series temporárais não estacionárias são normalmente transformadas - via
+métodos e funções matemáticas - em séries estacionárias. Tal transformação torna o processo 
+de previsão, muito fácil: Desse modo é assumido que as propriedades estatisticas da serie
+temporal serão a mesma no futuro, assim como foi no passado.
+
+Por conta da aleatoriedade dos problemas do mundo real, tais modelos não permitem que o 
+relacionamento entre os fatores e a varivel prevista sejam capturados e mapeameados com 
+precisão. Contudo, tecnicas de regressão não linear tais como Redes Neurais Artificias (ANN)
+surgem como alternativas contra esse problema.
+
+Zhang G.,Patuwo B.E.,and Hu M. Y. Forecasting with artiﬁcial neural networks: The state 
+of the art. In International Journal of Forecasting, pages 35–62, 1998.
+
+
+2.2 Trabalhos relacionados
+
+Judy L. Miller, Cynthla S. McCahon, and Brenda K. Bloss. Food production forecasting with simple 
+time series models. Hospitality Research Journal, 14(3):9–21,1991.
+
+Este estudo explora modelos com series temporais utilizando métodos de Naive, Media Movel 
+Simples (Simple Moving Average), Suavização Exponencial Simples (Simple Exponential Smoothing)
+para prever a demanda de comida em um restaurante universitário. Dados históricos de 3 anos
+foram analisados, as escolhas dos clientes para determinadas combinações de pratos foram 
+consideradas. Com esses dados foi possivel determinar o nível de preferencia dos consumidores
+para um determinado item do menu, assim como estimar sua demanda.
+
+Kisang Ryu and Alfonso Sanchez. The evaluation of forecasting methods at an institutional 
+foodservice dining facility. The Journal of Hospitality Financial Management,
+11(1):27–45, 2003.
+
+Identificaramm o método mais apropriado para prever a quantidade de refeições consumidas durante um
+semestre inteiro em uma universidade. A maioria dos métodos utiilizados foram baseados em series 
+temporais, como modelo 1,2 e 3 de Naive. SMA e Dupla Média Móvel, SES, Suaviazação Exponencial Dupla,
+Método de Holt's e Winter. O requisito para escolher o método mais apropriado e preciso foi a facilidade
+com que os gestores da cantina, assim como o nível de precisão. Assim, para estimar a precisão, as 
+métricas utilizadas foram o Desvio Médio Absoluto (Mean Absolute Deviation), Erro quadrático médio 
+(Mean Squared Error), Porcentagem de erro média (Mean Percentage Error), Raiz quadrada do erro médio 
+Root Squared Mean Error). Dados históricos de 13 semanas foram coletados. Tais dados foram ajustados 
+para levar em consideração circunstancias especiais como clima, eventos especiais, feriados, etc.
+Contudo, os modelos de series temporais utilizados não consideraram outras variáveis além do histórico
+de demanda de cada tipo de prato. O modelo de Naive-1 teve a pior performance, pois a previsão do
+número de refeições a ser produzida era baseada no dia anterior. LR (Linear Regression) foi o segundo
+método com a pior precisão, pois o modelo considera apenas uma variavel e consequentemente, não 
+conseguiu capturar o aparecimento da sazonalidade. Em contramão, Multipla Regressão Linear teve a melhor
+precisão (MSE = 382 e U-Statistic = 0,78) pois considera vários preditores. Em termos de precisão esse 
+método teve melhor performance pois encaixou a serie temporal dos dados com sazonalidade. Neste estudo 
+a escolha do método mais apropriade foi baseado na precisão e simplicidade, pois um gerente de cozinha
+comum, não possuí conhecimento ou tempo para explorar modelos. Mesmo com o MLR tendo a melhor precisão,
+o modelo escolhido como mais apropridado foi Naive-2 - utiliza a demanda das duas ultimas semanas para 
+prever a demanda da próxima-, obtendo o terceiro lugar em precisão e eleito como segundo 
+método mais fácil de se usar e implementar.
+
+[BS09]
+Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Usage of data mining techniques in discovering the 
+food consumption patterns of students and employees of university.2009.
+
+O estudo possuí 3 metas principais. Primeiramente, identificar os 4 fatotes mais relevantes que afetam
+o consumo de comida nos refeitorios de uma universidade. Depois construir um sistema capaz de 
+prever o consumo diario da combinação de 4 tipos de pratos contidos no cardapio diario. O estudo 
+almeja descobrir/identificar associações frequentes no consumo. Para realizar isso, tecnicas de 
+mineração de dados tais como Arvores de Decisão (Decision Trees) para regressão - Microsoft Decision
+Tree (MSDT)- e regras de associação (Association Rules) foram usadas. Enquanto as regras de associação
+permitem a descoberta de relacionamentos ocultos, correlações e atributos descritivos, as arvores de
+decisão ajudam a prever novos casos baseados nos antigos. [Pang-Ning Tan, Michael Steinbach, and Vipin Kumar. Introduction to Data Mining,
+(First Edition). Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA,
+2005.] Assim, os dados de um ano relacionados ao consumo diario de comida foram coletados. Os dados 
+continham 4 tipos de pratos, dia da semana por nome, numero do dia e mes, um booleano indicando se o 
+dia é feriado ou fim de semana. Para mensurar a performance, a metrica R² foi utilizada.
+
+Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Predicting food demand in food courts by decision 
+tree approaches. Procedia Computer Science, 3(Supplement C):759 – 763, 2011. 
+World Conference on Information Technology.
+
+Este estudo utiliza uma base dados de dois anos anteriores. Em adição as variaveis descritas no 
+paragrafo anterior, foram registrados as calorias do cardapio. Arvores de decisão foram utilizadas, 
+tais como Arvores de Classificação e Regressão (Classification And Regression Trees), CHAID e 
+Microsoft Decision Trees. Como a maiorias das variaveis  foram continuas e descretas, metodos 
+considerando multipla divisão de atributos tiveram melhor performance do que aqueles que
+utilizaram divisão binária, provando mais uma vez que o melhor método depende do contexto do 
+problema assim como que, Arvores de Decisão para regressão possuem boa performance na previsão
+do consumo de comida.
+
+Arvores de decisão são frequentemente comparadas a Redes Neurais Artificiais, ambas são capazes de
+capturar relacionamentos não lineares entre variaveis, mesmo que não sejam predefindos. Por conta
+da falta de robustez para lidar com valores atipicos(outliers), performance subotima e a dificil
+interpretação das Arvores de Decisão quando varias variaveis de entradas são utilizadas, Arvores
+Aleatórias foram propostas [Leo Breiman. Random forests. Machine Learning, 45(1):5–32, Oct 2001.]
+para superar estes problemas [Muhammad Waseem Ahmad, Monjur Mourshed, and Yacine Rezgui. Trees 
+vs neurons: Comparison between random forest and ann for high-resolution prediction of building ]
+energy consumption. Energy and Buildings, 147:77 – 89, 2017]. Assim, devido a falta de estudo
+na aplicação de Redes Neurais Artificiais e Avores Aleatórias para previsão da demanda comida para
+serviços fabris, tais tecnicas foram aplicadas neste estudo. Aliado ao fato que não existe algo
+como "O melhor método para todos os contextos", Support Vector Regression também foram usados, 
+assim é possivel realizar comparações entre modelos preditivos.
+
+[Lasek A., Cercone N., and Saunders J. Leon-Garcia A. et al. (eds) Smart City 360, volume 166, 
+chapter Restaurant Sales and Customer Demand Forecasting: Literature Survey and Categorization 
+of Methods, pages 479–491. Springer, Cham, June 2016.], desesnvolveram um questionario literario
+sobre os metodos apropridados para prever a demanda dos consumidores. Eles também forneceram
+uma lista com as variaveis que podem ser, eventualmente, utilizadas como preditores, tais como 
+(niveis de chuva, temperatura), tempo (mes, semana, dia da semana, horario), feriados (nacional,
+municipal, e feriados escolares), eventos especiais e dados históricos de demanda. Depois disso,
+tais metodos são brevemente descritos e artigos relacionados que eles são aplicados são mostrados.
+Portanto, a Regreessão Multipla e Redes Neurais Artificiais foram idientificados como os metodos 
+mais apropriados para previsão de demanda dos consumidores, pois ambos são capazes receber
+multiplas variaveis preditores como entrada. Apesar dos modelos de Regressão Multipla possam
+falhar em clarificar o relacionamento entre preditores e valores previstos por conta da
+multicolinearidade - fenomeno em que um preditor pode ser predito por outro - entre as variaveis
+preditoras, tais modelos podem traduzir também padrões não lineares em dados, ao contrário das
+séries temporais.
+[ANJ16]
+
+In [PatuwoB.Zhang,G.andM.Hu. Forecastingwithartiﬁcialneuralnetworks: Thestate of the art. 
+International Journal of Forecasting, 14:35–62.] O estado da arte em confiabilidade na 
+previsão é apresentada. A maioria dos problemas do mundo real são não lineares, assim o
+estudo mostra o por que as redes neurais são métodos preferíveis e apresentando uma visão
+geral das áreas em que as Redes Neurais Artificais encontram aplicação. O estudo é concluído
+com uma apresentação dos problemas e tecnicas das Redes Neurais e uma maneira de encontrar
+a arquitetura ótima da rede.
+
+Do mesmo modo que as Redes Neurais, Suport Vector Regression (SVR) é um método cada vez mais 
+utilizado para previsão. Em  [A.A. Levis and L.G. Papageorgiou. Customer demand 
+forecasting via support vector regression analysis. Chemical Engineering Research 
+and Design, 83(8):1009 – 1018, 2005.] é proposta uma metodologia de previsão da 
+demanda dos consumidores através da analise SVR. A metodologia é baseada na teoria do aprendizado
+estatístico [V. Vapnik. The nature of statistical learning theory. Springer, New York, 1995.]
+inferindo uma função preditiva através de dados de treino, como uma média da previsão dos 
+dados não vistos, além de aplicações do SVR. O estudo também mostra uma visão geral sobre
+o método de refinamento para os Hiperparametros do SVR e finaliza com listrações e exemplos
+da aplicação do SVR.
+
+ Em [Xinliang L. and Dandan S. Tan Y., Takagi H., Shi Y., Niu B. (eds) Advances in Swarm 
+ Intelligence, volume10386, chapter University Restaurant Sales Forecast Based on BP 
+ Neural Network - In Shanghai Jiao Tong University Case., pages 338–347. Springer, 
+ Cham, June 2017.] foram obtidas as maiores taxas de acerto, utilizando Redes Neurais com
+ Retro Propagação (BPNN - Back Propagation Neural Networks) para prever a quantidades de 
+ vendas em um restaurante. O conjunto de variáveis utilizados são muito similares aos
+ utilizados nos estudos [Ahmet Selman Bozkir and Ebru Akcapinar Sezer. Usage of data 
+ mining techniques in discovering the food consumption patterns of students and employees
+ of university. 2009.] e [Ahmet Selman Bozkir and Ebru Akcapinar Sezer. 
+ Predicting food demand in food courts by decision tree approaches. Procedia Computer 
+ Science,3(SupplementC):759 – 763, 2011. World Conference on Information Technology.
+ MAPE(Mean Absolute Percentage Error) foi utilizado como métrica de assertividade.
+ 
+ Conclusões.
+ 
+ Resumidamente, são esperados relacionamentos em grande parte não lineares entre as 
+ variaveis preditores e o valor predito - demanda diaria para um determinado tipo de prato -
+ tecnicas avançadas de mineração de dados são mais apropriadas para se atingir os mais 
+ altos níveis de precisão possiveis, desse modo dimuindo o máximo o desperdício de comida.
+ Toda dinamica e aleatoriedade involvida no contexto implica o uso destas tecnicas, mesmo
+ que algumas delas sejam de dificil interpretação. 
+ Como não há consenso sobra qual tecnica de mineração de dados (Redes Neurais Artificiais,
+ SVRs, Florestas Aleatórias) serão mais eficientes no contexto do estudo apresentado nesta
+ dissertação, todos eles serão aplicados neste estudo, sendo este um aspecto inovador 
+ na previsão da demanda de comida. O considerável número de variáveis, muitas delas nunca
+ exploradas nas literaturas anteriores também constitui consideravel contribuição para
+ esta dissertação.
+  
+  
+ 
