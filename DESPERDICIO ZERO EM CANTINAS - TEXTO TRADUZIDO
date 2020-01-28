@@ -197,5 +197,26 @@ da aplicação do SVR.
  exploradas nas literaturas anteriores também constitui consideravel contribuição para
  esta dissertação.
   
-  
+ METODOLOGIA
+ 
+ Como mencionado anteriormente, o propósito deste estudo é prever a demanda diaria para um
+ tipo de refeição na cantina da Faculdade de Engenharia da Universidade do Porto. Este modelo
+ tem a intenção de ajudar os gestores da cantina na definição das quantidades de ingredientes a 
+ serem compradas assim como as quantidades para preparar cada prato. Este sistema de predição foi
+ desenhado de acordo com as caracteristicas da cantina da Faculdade de Engenharia da Universidade 
+ do Porto. Assim alguns detalhes do seu serviço e horários devem ser considerados. São eles:
+ 
+ - A cantina funciona como fabrica de lanches das 11:30 as 2PM, contudo, as pessoas vem somente 
+ no horário do almoço.
+ 
+ - Sua operação funciona apenas em dias úteis, assim é fechada durante o fim de semana.
+ 
+ - Ao consumidor são oferecidos três tipos de pratos - carne, peixes e comida vegetariana -, os quais
+ o cliente pode escolher um ou mais se comprados separadamente.
+ 
+ - Usualmente, o cardapio, menu e as combinações oferecidas pela cantina são repetidos a cada oito
+ semanas.
+ 
+Note que neste estudo nós não fazemos distinção da demanda de comida pela compra do menu. Isto é feito
+pelo 
  
