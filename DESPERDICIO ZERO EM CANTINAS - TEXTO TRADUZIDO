@@ -218,5 +218,27 @@ da aplicação do SVR.
  semanas.
  
 Note que neste estudo nós não fazemos distinção da demanda de comida pela compra do menu. Isto é feito
-pelo 
- 
+por que não temos informações sobre como o cliente se comporta quando o prato que ele quer não está
+disponíveis. Além disso, a quantidade comprada é utilizada como representação da demanda pelo menu.
+De maneira similar, o termo vendas se refere ao número de pratos que foram vendidos ou consumidos.
+
+Este capitulo descreve as tecnicas utilizadas para prever a demanda de comida para um determinado prato.
+Assim, a maneira como os dados são utilizados, coletados e processados também é descrito.
+
+3.1 - Descrição Geral
+
+Se refere ao problema da regressão - predição de uma variável continua, no contexto dado, o número de
+refeições que devem ser preparadas para um tipo especifico de prato em um dia especifico. Modelos
+de regressão em árvore são propostos, um para pratos com carne, um para peixes e outro para pratos
+vegetarianos.
+
+Metodos como Redes Neurais Artificiais, Suport Vector Machines e Floresta Aleatória são capazes de 
+construir um modelo preditivo que identifica padrões não lineares nos dados - que emergem do
+efeito casual de relação entre variaveis preditoras e a variavel prevista. Por isso, tais metodos
+são muito úteis pois eles tem a habilidade de aprender estes relacionamentos através de análise e 
+processamento de dados. Este metodos claramente não necessitam que o analista conheça as leis implicitas
+e regras que governam os sistemas de onde que os dados são obtidos, o que não é razoável dados os 
+problemas do mundo real. Além disso, terminado o processo de aprendizado, tais metodos ganham capacidade
+de generalização, isto é, inferir por si mesmo, data previamente não vista, para prever comportamento
+futuro. Dito isto, era esperado que sua performance tenha impacto significativo no balanceamento da 
+demanda para cada tipo de prato e a quantidade produzida, e assim reduzindo o desperdício de comida.
