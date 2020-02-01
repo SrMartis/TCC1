@@ -242,3 +242,125 @@ problemas do mundo real. Além disso, terminado o processo de aprendizado, tais 
 de generalização, isto é, inferir por si mesmo, data previamente não vista, para prever comportamento
 futuro. Dito isto, era esperado que sua performance tenha impacto significativo no balanceamento da 
 demanda para cada tipo de prato e a quantidade produzida, e assim reduzindo o desperdício de comida.
+
+Para atingir os objetivos propostos, serão identificados os três melhores modelos de 
+regressão, para cada tipo de prato.
+
+Dados
+
+Método de regressão distinguem dois tipos de variaveis. Eles podem ser, tecnicamente
+falando, independente - variaveis preditoras - or variaveis previstas. Como previamente
+mencionado neste documento, variaveis preditoras afetam o valor da variável prevista.
+Dado o contexto a varivael prevista esta relacionada com a demanda de comida - entendida
+como o número de refeições servidas - para um ou três tipos de prato. Contudo, para trinar
+os modelos contruidos com estes método, foi necessário coletar dados históricos sobre a 
+demanda para para tipo de prato. Estes dados foram obtidos através da colaboração do
+Instituto de Serviços de Ação Social da Universidade do Porto”(SASUP), o qual registrou
+armazenou diariamente os dados historicos de demanda para dos últimos dois anos, 2016 e 2017
+para cada um dos pratos. Estes registros, por instancia, quantas vezes um determinado prato
+foi servido em um dia específico - variável prevista(demanda pelo menu). Porém, como os 
+os dados coletados são de apenas 2 anos algumas variáveis independentes foram deixadas de
+lado. Por instancia, se existissem mais dados disponíveis, a média da venda para cada menu
+dos de determinado prato e a soma das vendas verificadas para cada um dos pratos no dia 
+homologo do ano anterior poderia ser utilizada como variavel preditora.
+
+Diante das limitações, variaveis preditoras que podem impactar a demanda diaria de comida 
+foram identificadas. Algumas dessas variaveis são exclusivas e estritamente relacionadas
+ao ambiente que envolve a cantina da Faculdade de Engenharia da Universidade do Porto,
+enquanto o restante foi inspirada pelas variaveis utilizadas na literatura tais como
+as identificadas em  Lasek A., Cercone N., and Saunders J. Leon-Garcia A. et al. (eds) 
+Smart City 360, volume 166, chapter Restaurant Sales and Customer Demand Forecasting: 
+Literature Survey and Categorization of Methods, pages 479–491. Springer, Cham, June 2016.
+
+Dados sobre condições meteorologicas foram coletadas através de uma API chamada
+WWO(World Weather Online). Está API fornece dados históricos a cada hora de localizações
+ao redor do mundo desde Jullho de 2008. Estes dados são coletados de várias fontes como
+World Meteorological Organization (WMO), Satelites geoestacionários, Centros Nacionais
+de Previsão Ambiental e assim por diante. Como alguns dados e.g precipitação são fornecidos
+em horas, foi decidido coletar os dados meio dia (12h), pois está é a hora entre o 
+período de serviço de almoço da cantina. Variáveis meteorológicas foram coletadas pois
+eram esperadas situações em que dias ensolarados tenham um impacto negativo na demanda para
+aquele dia específico, algumas pessoas podem preferir almoçar no terraço ao invés de 
+ambientes internos.
+
+Variáveis que caracterizam um determinado dia foram levadas em consideração, como o 
+respectivo mes  e dia da semana. O número de graduandos, mestres, mestres integrados e 
+estudantes de PhD que tem aulas durante os diferentes período do dia (manhã, tarde ou ambos).
+Era esperados que as proximas variaveis afetassem a demanda de comida pois os alunos que 
+ficam o dia inteiro próximos a faculdade são mais propensos a almoçar na cantina, ao 
+contrário daqueles que tem aulas apenas de manhã que é esperado que almoçem em um lugar
+diferente da cantina. Por exemplo, embora o prato de carne seja o mais selecionado, certos
+tipos de peixe ou menus vegetarianos possuem enorme preferencia pelos consumidores da
+cantina. Assim, a descrição de cada tipo de prato oferecido pela cantina ao longo de dois
+anos também foram registrados como variáveis preditoras.
+
+As próximas variváveis também foram selecionadas:
+
+	- Praxe, esta variável reflete se o dia sob consideração é um dia com atividades
+de "praxe" estão acontecendo e assim se todos os estudantes vão almoçar juntos na cantina.
+Estudantes envolvidos em atividades de praxe estão comunmente juntos depois das aulas do
+primeiro aluno, um dia por semana e normalmente, e se eles ainda não almoçaram, todos eles
+almoçam juntos na cantina.
+
+	-queimaWednesday - Esta variável indica se o dia em consideração se referea a uma 
+quarta feira em um semana de "queima das fitas". "Queima das fitas" é uma semana, que 
+acontece todo ano, a qual não há aulas e os estudantes celebram seus estudos de fim de ano.
+Terça-Feira desta semana é o dia em que há mais estudantes festejando tanto de manha e de 
+tarde, desse modo, as chances dos alunos acordarem mais tarde depois que a 
+cantina está fechada na Quarta-Feira. Portanto é esperado que neste dia menos alunos 
+frequentem a cantina.
+
+	-Se foi feriado a um, dois ou três dias atrás. Estás variaveis permitem capturar 
+a proximidade de um dia com um feriado passado. Se certo dia, por exemplo, Sexta-Feira, foi
+identificado que no dia anterior e esperado que menos pessoas frequentando a cantina,
+pois não há aulas na Sexta, maior a possibilidade dos estudantes terem viajado para sua
+cidade natal no dia anterior, ou seja Quinta.
+
+	-Se vai feriado em um dois ou três dias. Estas variávies permitem capturar a 
+proximidade de um dia com um feriado futuro. Supondo que estamos em uma Sexta. Se é feriado
+na segunda, isto é, em três dias, haverão pessoas sem aula nesta Sexta-Feira. Dadas as 
+circunstancias é esperada redução de consumo nestes dias.
+
+	-ordinaryExamsSeason, supplementaryExamsSeason - Estas variáveis especificam se um
+determinado dia é parte de temporada ordinária de exames ou temporada de exames 
+suplementares. Temporada de exames são divididas em duas - a ordinária é a que todos os
+estudantes estão inscritos e suplementar que apenas alguns estudantes se inscrevem. No 
+primeiro semestre todos os estudantes com exceção dos primeiros anos estão inscritos, 
+além disso, há poucos estudantes na faculdade e consequentemente poucos estudantes vão
+para a cantina. A temporada suplementar é um periodo para os estudantes que querem 
+melhorar sua nota obtida na temporadada regular ou que não obtiveram sucesso na temporada.
+Com isso, é esperado que o número de estudantes seja menor do que ao longo da temporada, e
+assim menos estudantes proximos da faculdade e automaticamente a redução do consumo diário
+na cantina na temporada.
+
+	-enrollmentWeek, 1stYear1stWeek, 1stYear2ndWeek. Estas variaveis permitem 
+identificar os dias que fazem parte das primeiras semanas do ano academico. Nestas semanas
+os estudantes do primeiro ano são convidados a participar de atividades exttracurriculares
+o que indica que estes estudantes passam mais tempo nos arredores da faculdade. É também 
+nestas duas semanas que há grande frequencia dos alunos. Dado tudo isso, é esperada 
+grande afluencia de alunos durante este período.
+
+	Os dados relacionados ao praxe foram coletados dos cinco maiores grupos, isto é,
+indivíduos de Quimica, Civil, Informatica, Mecanica e Engenharia Eletrica. Estes grupos
+são os mais ativos da faculdade sendo assim os que possuem maior potencial de influenciar
+os consumos. Algumas observações nos dados podem ter mais de um valor atribuído para a 
+variável "praxe", pois alguns grupos se juntam durante o mesmo dia da semana. Este problema
+é pontuado através da conversão de valores categoricos para variaveis binárias. Variaveis
+relacionadas com feriados se referem a dias em que a cantina não funciona.
+	Para maiores detalhes sobre as variáveis, e a maneira com elas foram coletadas,
+se são categoricas (tabela 3.3), binárias (tabela 3.4), continua (3.2) ou 
+discreta(tabela 3.1), independente ou dependente, por favor consultar as tabelas abaixo.
+
+
+
+CRIPTOGRAFIA É UMA TECNICA QUE UTILIZA ALGORITIMOS MATEMÁRICOS PARA DESCARCTERIZAR A 
+INFORMAÇÃO.
+
+
+
+
+
+
+
+O LIVRO DOS CÓDIGOS.
+
