@@ -1,0 +1,36 @@
+
+Pendências:
+
+ARTIGO
+Referencial bibliográfico:
+	
+	- Análise de estudos anterioes.
+
+	- Referências de desperdício de comida. (RENAN)
+	
+	- Definição de Inteligência Artificial. (LUCAS)
+
+	- O que é SVR. (IGOR)
+	
+Metodologia:
+		
+	- Descrição e Organlização dos dados coletados.
+
+	- Razão, motivo da escolha destes dados.
+
+	- Como o método foi aplicado.	
+
+	- Primeiros resultados.
+
+ENTREGAVEIS
+
+	- relatorio mensal (GRUPO)
+
+N2
+
+	- trabalhar no relatorio tecnico (LUCAS)
+
+	- Finalizar slides (EM ANDAMENTO RENAN)
+
+	- Resultados preliminares (IGOR)
+
